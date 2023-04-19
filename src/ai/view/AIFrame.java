@@ -1,5 +1,6 @@
 package ai.view;
 
-public class AIFrame {
+public class AIFrame 
+{
 
 }

@@ -1,5 +1,6 @@
 package ai.model;
 
-public class OpenAI {
+public class OpenAI 
+{
 
 }

@@ -1,5 +1,6 @@
 package ai.view;
 
-public class MenuPanel {
+public class MenuPanel 
+{
 
 }
