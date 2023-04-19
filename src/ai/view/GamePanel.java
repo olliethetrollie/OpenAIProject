@@ -13,12 +13,15 @@ public class GamePanel extends JPanel
 	private SpringLayout layout;
 	private JPanel dialogue;
 	
+	public String progNum;
+	
 	public GamePanel(Controller app)
 	{
 		super();
 		this.app = app;
 		this.layout = new SpringLayout();
 		this.dialogue = new JPanel();
+		this.progNum = new String("1A");
 		
 		setupPanel();
 		setupListeners();
@@ -27,7 +30,7 @@ public class GamePanel extends JPanel
 	
 	private void setupPanel()
 	{
-		this.setBackground(Color.black);
+		this.setBackground(Color.GRAY);
 		this.setLayout(layout);
 		this.add(dialogue);
 	}
@@ -39,9 +42,10 @@ public class GamePanel extends JPanel
 	
 	private void setupLayout()
 	{
-		layout.putConstraint(SpringLayout.NORTH, dialogue, 600, SpringLayout.NORTH, this);
-		layout.putConstraint(SpringLayout.WEST, dialogue, 10, SpringLayout.WEST, this);
-		layout.putConstraint(SpringLayout.EAST, dialogue, 10, SpringLayout.EAST, this);
+		layout.putConstraint(SpringLayout.NORTH, dialogue, 550, SpringLayout.NORTH, this);
+		layout.putConstraint(SpringLayout.WEST, dialogue, 40, SpringLayout.WEST, this);
+		layout.putConstraint(SpringLayout.EAST, dialogue, -40, SpringLayout.EAST, this);
+		layout.putConstraint(SpringLayout.SOUTH, dialogue, -20, SpringLayout.SOUTH, this);
 	}
 	
 	private void updateDisplay()
