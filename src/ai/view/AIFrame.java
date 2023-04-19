@@ -26,7 +26,7 @@ public class AIFrame extends JFrame
 		this.setSize(1280, 720);
 		this.setResizable(false);
 		
-		this.setContentPane(menu);
+		this.setContentPane(game);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		this.setVisible(true);
