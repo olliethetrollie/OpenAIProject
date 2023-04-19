@@ -5,6 +5,7 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 import java.awt.Color;
 import javax.swing.SpringLayout;
+import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 
 public class GamePanel extends JPanel
@@ -12,6 +13,7 @@ public class GamePanel extends JPanel
 	private Controller app;
 	private SpringLayout layout;
 	private JPanel dialogue;
+	private JLabel text;
 	
 	public String progNum;
 	
@@ -22,6 +24,7 @@ public class GamePanel extends JPanel
 		this.layout = new SpringLayout();
 		this.dialogue = new JPanel();
 		this.progNum = new String("1A");
+		this.text = new JLabel("Placeholder");
 		
 		setupPanel();
 		setupListeners();
@@ -33,6 +36,7 @@ public class GamePanel extends JPanel
 		this.setBackground(Color.GRAY);
 		this.setLayout(layout);
 		this.add(dialogue);
+		dialogue.add(text);
 	}
 	
 	private void setupListeners()
