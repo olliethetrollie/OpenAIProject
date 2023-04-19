@@ -8,12 +8,14 @@ public class AIFrame extends JFrame
 	
 	private Controller app;
 	private MenuPanel menu;
+	private GamePanel game;
 	
 	public AIFrame(Controller app)
 	{
 		super();
 		this.app = app;
 		this.menu = new MenuPanel(this.app);
+		this.game = new GamePanel(this.app);
 		
 		setupFrame();
 	}
@@ -21,7 +23,7 @@ public class AIFrame extends JFrame
 	public void setupFrame()
 	{
 		this.setTitle("Placeholder Text");
-		this.setSize(800, 600);
+		this.setSize(1280, 720);
 		this.setResizable(false);
 		
 		this.setContentPane(menu);
