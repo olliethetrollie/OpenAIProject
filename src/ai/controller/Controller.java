@@ -9,7 +9,7 @@ public class Controller
 	
 	public Controller()
 	{
-		this.window = new AIFrame();
+		this.window = new AIFrame(this);
 	}
 	
 	public void start()
