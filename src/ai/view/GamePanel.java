@@ -25,7 +25,7 @@ public class GamePanel extends JPanel
 		this.app = app;
 		this.layout = new SpringLayout();
 		this.dialogue = new JPanel();
-		this.progNum = 1;
+		this.progNum = 0;
 		this.text = new JLabel("Placeholder");
 		
 		setupPanel();
