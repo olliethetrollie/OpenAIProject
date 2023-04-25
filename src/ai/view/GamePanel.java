@@ -7,6 +7,7 @@ import java.awt.Color;
 import java.awt.event.*;
 import javax.swing.SpringLayout;
 import javax.swing.JLabel;
+import javax.swing.JLabel.*;
 import javax.swing.ImageIcon;
 
 public class GamePanel extends JPanel
@@ -48,7 +49,7 @@ public class GamePanel extends JPanel
 					public void mouseClicked(MouseEvent click)
 					{
 						progNum += 1;
-						app.progression(progNum);
+						text.setText(app.progression(progNum));
 					}
 
 					@Override
