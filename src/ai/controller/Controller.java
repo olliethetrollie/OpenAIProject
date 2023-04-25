@@ -21,8 +21,8 @@ public class Controller
 	}
 	
 	/**
-	 * Takes the progress number from game panel and passes it to the model to retrieve
-	 * next piece of dialogue.
+	 * {@link ai.controller.Controller.progression} takes the progress number 
+	 * from game panel and passes it to the model to retrieve the next piece of dialogue.
 	 * @author aorr6593
 	 */
 	public String progression(int progNum)

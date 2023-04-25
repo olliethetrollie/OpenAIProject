@@ -41,7 +41,7 @@ public class MenuPanel extends JPanel
 	
 	private void setupListeners()
 	{
-		
+		// TODO Allow view changes
 	}
 	
 	private void setupLayout()

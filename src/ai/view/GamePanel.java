@@ -35,6 +35,7 @@ public class GamePanel extends JPanel
 	
 	private void setupPanel()
 	{
+		// TODO Image background
 		this.setBackground(Color.GRAY);
 		this.setLayout(layout);
 		this.add(dialogue);

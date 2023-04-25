@@ -26,6 +26,7 @@ public class AIFrame extends JFrame
 		this.setSize(1280, 720);
 		this.setResizable(false);
 		
+		// TODO Panel exchange
 		this.setContentPane(game);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
