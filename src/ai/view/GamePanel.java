@@ -4,6 +4,7 @@ import ai.controller.Controller;
 import javax.swing.JPanel;
 import javax.swing.JButton;
 import java.awt.Color;
+import java.awt.event.*;
 import javax.swing.SpringLayout;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
@@ -41,7 +42,40 @@ public class GamePanel extends JPanel
 	
 	private void setupListeners()
 	{
-		
+		this.addMouseListener(new MouseListener()
+				{
+					@Override
+					public void mouseClicked(MouseEvent click)
+					{
+						progNum += 1;
+						app.progression(progNum);
+					}
+
+					@Override
+					public void mousePressed(MouseEvent e) {
+						// TODO Auto-generated method stub
+						
+					}
+
+					@Override
+					public void mouseReleased(MouseEvent e) {
+						// TODO Auto-generated method stub
+						
+					}
+
+					@Override
+					public void mouseEntered(MouseEvent e) {
+						// TODO Auto-generated method stub
+						
+					}
+
+					@Override
+					public void mouseExited(MouseEvent e) {
+						// TODO Auto-generated method stub
+						
+					}
+				}
+		);
 	}
 	
 	private void setupLayout()
