@@ -15,7 +15,7 @@ public class GamePanel extends JPanel
 	private JPanel dialogue;
 	private JLabel text;
 	
-	public String progNum;
+	public int progNum;
 	
 	public GamePanel(Controller app)
 	{
@@ -23,7 +23,7 @@ public class GamePanel extends JPanel
 		this.app = app;
 		this.layout = new SpringLayout();
 		this.dialogue = new JPanel();
-		this.progNum = new String("1A");
+		this.progNum = 1;
 		this.text = new JLabel("Placeholder");
 		
 		setupPanel();
