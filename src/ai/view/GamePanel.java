@@ -44,6 +44,11 @@ public class GamePanel extends JPanel
 	
 	private void setupListeners()
 	{
+		/**
+		 * Mouse listener passes progression to the controller and replaces JLabel
+		 * with new dialogue.
+		 * @author aorr6593
+		 */
 		this.addMouseListener(new MouseListener()
 				{
 					@Override
