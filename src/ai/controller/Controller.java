@@ -36,5 +36,10 @@ public class Controller
 			return "error";
 		}
 	}
+	
+	public void changeScreen(String value)
+	{
+		window.replaceScreen(value);
+	}
 
 }

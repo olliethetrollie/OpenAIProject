@@ -5,6 +5,8 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 import java.awt.Color;
 import javax.swing.SpringLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MenuPanel extends JPanel
 {
@@ -14,6 +16,7 @@ public class MenuPanel extends JPanel
 	private JButton startButton;
 	private JButton loadButton;
 	private JButton instructButton;
+	private AIFrame frame;
 	
 	public MenuPanel(Controller app)
 	{
@@ -42,6 +45,18 @@ public class MenuPanel extends JPanel
 	private void setupListeners()
 	{
 		// TODO Allow view changes
+		
+		startButton.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent click) 
+				{
+					app.changeScreen("game");	
+				}
+				
+				}
+				);
+		
 	}
 	
 	private void setupLayout()
