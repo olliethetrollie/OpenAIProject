@@ -17,6 +17,7 @@ public class GamePanel extends JPanel
 	private JPanel dialogue;
 	private JLabel text;
 	private JLabel bgImage;
+	private ImageIcon backgroundImg;
 	
 	public int progNum;
 	
@@ -28,7 +29,9 @@ public class GamePanel extends JPanel
 		this.dialogue = new JPanel();
 		this.progNum = 0;
 		this.text = new JLabel("Placeholder");
-//		bgImage.setIcon(ai/photos/park.png);
+//		this.backgroundImg = new ImageIcon("/photos/park.png");
+		this.bgImage = new JLabel("Image");
+		
 		
 		setupPanel();
 		setupListeners();
@@ -39,8 +42,23 @@ public class GamePanel extends JPanel
 	{
 		// TODO Image background
 		this.setBackground(Color.GRAY);
+		this.add(bgImage);
 		this.setLayout(layout);
 		this.add(dialogue);
+		
+		try
+		{
+			backgroundImg = new ImageIcon(getClass().getResource("/photos/park.png"));
+			bgImage.setIcon(backgroundImg);
+			bgImage.setText("Stuff");
+		}
+		catch (NullPointerException missingFile)
+		{
+			this.bgImage = new JLabel("Not found lol");
+			
+		}
+		
+		bgImage.setIcon(backgroundImg);
 		dialogue.add(text);
 	}
 	
@@ -93,6 +111,13 @@ public class GamePanel extends JPanel
 		layout.putConstraint(SpringLayout.WEST, dialogue, 40, SpringLayout.WEST, this);
 		layout.putConstraint(SpringLayout.EAST, dialogue, -40, SpringLayout.EAST, this);
 		layout.putConstraint(SpringLayout.SOUTH, dialogue, -20, SpringLayout.SOUTH, this);
+		
+		
+		layout.putConstraint(SpringLayout.NORTH, bgImage, 10, SpringLayout.NORTH, this);
+		layout.putConstraint(SpringLayout.WEST, bgImage, 10, SpringLayout.WEST, this);
+		layout.putConstraint(SpringLayout.EAST, bgImage, -10, SpringLayout.EAST, this);
+		layout.putConstraint(SpringLayout.SOUTH, bgImage, -10, SpringLayout.SOUTH, this);
+		
 	}
 	
 	private void updateDisplay()

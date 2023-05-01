@@ -22,7 +22,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class SecondPanelTest
+class TestMenuPanel
 {
 	private Controller testedController; //Change me
 	private MenuPanel testedPanel; //Change me
