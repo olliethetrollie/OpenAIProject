@@ -17,7 +17,12 @@ public class Controller
 	
 	public void start()
 	{
-		
+		window.replaceScreen("MENU");
+	}
+	
+	public void play()
+	{
+		window.replaceScreen("GAME");
 	}
 	
 	/**

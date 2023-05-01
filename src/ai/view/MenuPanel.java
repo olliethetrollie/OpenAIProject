@@ -44,14 +44,13 @@ public class MenuPanel extends JPanel
 	
 	private void setupListeners()
 	{
-		// TODO Allow view changes
 		
 		startButton.addActionListener(new ActionListener() {
 				
 				@Override
 				public void actionPerformed(ActionEvent click) 
 				{
-					app.changeScreen("game");	
+					app.play();	
 				}
 				
 				}

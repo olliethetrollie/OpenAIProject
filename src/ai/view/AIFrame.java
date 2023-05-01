@@ -31,52 +31,19 @@ public class AIFrame extends JFrame
 		this.setTitle("Placeholder Text");
 		this.setSize(1280, 720);
 		this.setResizable(false);
+		this.add(panelCards);
 		
-		// TODO Panel exchange
-		
-		if (panelVal.equalsIgnoreCase("game"))
-		{
-			game.setVisible(true);
-		}
-		else
-		{
-			menu.setVisible(true);
-		}
+		panelCards.add(game, "GAME");
+		panelCards.add(menu, "MENU");
+		replaceScreen("MENU");
 		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		this.setVisible(true);
 	}
 	
-	public void replaceScreen(String value)
+	public void replaceScreen(String screen)
 	{
-		if (value.equalsIgnoreCase("menu"))
-		{
-			panelVal = "menu";
-		}
-		else if (value.equalsIgnoreCase("game"))
-		{
-			panelVal = "game";
-		}
-		else
-		{
-			panelVal = "menu";
-		}
-	}
-	
-	public JPanel swapp(String value)
-	{
-		if (value.equalsIgnoreCase("menu"))
-		{
-			return menu;
-		}
-		else if (value.equalsIgnoreCase("game"))
-		{
-			return game;
-		}
-		else
-		{
-			return menu;
-		}
+		((CardLayout) panelCards.getLayout()).show(panelCards, screen);
 	}
 }
