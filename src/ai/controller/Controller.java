@@ -25,6 +25,11 @@ public class Controller
 		window.replaceScreen("GAME");
 	}
 	
+	public Object getFrame()
+	{
+		return window;
+	}
+	
 	/**
 	 * {@link ai.controller.Controller.progression} takes the progress number 
 	 * from game panel and passes it to the model to retrieve the next piece of dialogue.

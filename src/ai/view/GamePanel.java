@@ -16,6 +16,7 @@ public class GamePanel extends JPanel
 	private SpringLayout layout;
 	private JPanel dialogue;
 	private JLabel text;
+	private JLabel bgImage;
 	
 	public int progNum;
 	
@@ -27,6 +28,7 @@ public class GamePanel extends JPanel
 		this.dialogue = new JPanel();
 		this.progNum = 0;
 		this.text = new JLabel("Placeholder");
+//		bgImage.setIcon(ai/photos/park.png);
 		
 		setupPanel();
 		setupListeners();
