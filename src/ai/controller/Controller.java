@@ -43,7 +43,7 @@ public class Controller
 		}
 		else
 		{
-			return "error";
+			return "Game End :)";
 		}
 	}
 	

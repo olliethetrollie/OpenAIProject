@@ -2,7 +2,10 @@ package ai.view;
 
 import ai.controller.Controller;
 import javax.swing.JPanel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
+
 import java.awt.Color;
 import javax.swing.SpringLayout;
 import java.awt.event.ActionEvent;
@@ -17,6 +20,8 @@ public class MenuPanel extends JPanel
 	private JButton loadButton;
 	private JButton instructButton;
 	private AIFrame frame;
+	private JLabel title;
+	private ImageIcon titleImg;
 	
 	public MenuPanel(Controller app)
 	{
@@ -27,6 +32,8 @@ public class MenuPanel extends JPanel
 		this.loadButton = new JButton("Load Game");
 		this.instructButton = new JButton("Instructions");
 		this.layout = new SpringLayout();
+		this.title = new JLabel("");
+		
 		
 		setupPanel();
 		setupListeners();
@@ -37,9 +44,19 @@ public class MenuPanel extends JPanel
 	{
 		this.setLayout(layout);
 		this.add(buttonPanel);
+		try
+		{
+			titleImg = new ImageIcon(getClass().getResource("/photos/titleone.png"));
+			title.setIcon(titleImg);
+			title.setText("Title");
+		}
+		catch (NullPointerException missingFile)
+		{
+			this.title = new JLabel("Not found lol");
+			
+		}
+		this.add(title);
 		buttonPanel.add(startButton);
-		buttonPanel.add(loadButton);
-		buttonPanel.add(instructButton);
 	}
 	
 	private void setupListeners()

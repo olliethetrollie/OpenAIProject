@@ -45,10 +45,11 @@ public class GamePanel extends JPanel
 		this.setBackground(Color.GRAY);
 		this.add(bgImage);
 		this.setLayout(layout);
+		
+		bgImage.setIcon(backgroundImg);
 		this.add(dialogue);
 		
 		dialogue.add(text);
-		bgImage.setIcon(backgroundImg);
 		
 	}
 	
@@ -65,9 +66,9 @@ public class GamePanel extends JPanel
 					public void mouseClicked(MouseEvent click)
 					{
 						progNum += 1;
-						
-						text.setText(app.progression(progNum));
 						updateDisplay();
+						text.setText(app.progression(progNum));
+						
 						
 					}
 
@@ -105,6 +106,8 @@ public class GamePanel extends JPanel
 		layout.putConstraint(SpringLayout.EAST, dialogue, -40, SpringLayout.EAST, this);
 		layout.putConstraint(SpringLayout.SOUTH, dialogue, -20, SpringLayout.SOUTH, this);
 		
+
+		
 	}
 	
 	private void updateDisplay()
@@ -113,7 +116,7 @@ public class GamePanel extends JPanel
 		{
 			try
 			{
-				backgroundImg = new ImageIcon(getClass().getResource("/photos/SceneOne.png"));
+				backgroundImg = new ImageIcon(getClass().getResource("/photos/SceneOne.PNG"));
 				bgImage.setIcon(backgroundImg);
 				bgImage.setText("Stuff");
 			}
@@ -127,7 +130,7 @@ public class GamePanel extends JPanel
 		{
 			try
 			{
-				backgroundImg = new ImageIcon(getClass().getResource("/photos/SceneTwo.png"));
+				backgroundImg = new ImageIcon(getClass().getResource("/photos/SceneTwo.PNG"));
 				bgImage.setIcon(backgroundImg);
 				bgImage.setText("Stuff");
 			}
@@ -141,7 +144,7 @@ public class GamePanel extends JPanel
 		{
 			try
 			{
-				backgroundImg = new ImageIcon(getClass().getResource("/photos/SceneThree.png"));
+				backgroundImg = new ImageIcon(getClass().getResource("/photos/SceneThree.PNG"));
 				bgImage.setIcon(backgroundImg);
 				bgImage.setText("Stuff");
 			}
@@ -155,7 +158,7 @@ public class GamePanel extends JPanel
 		{
 			try
 			{
-				backgroundImg = new ImageIcon(getClass().getResource("/photos/SceneFour.png"));
+				backgroundImg = new ImageIcon(getClass().getResource("/photos/SceneFour.PNG"));
 				bgImage.setIcon(backgroundImg);
 				bgImage.setText("Stuff");
 			}
