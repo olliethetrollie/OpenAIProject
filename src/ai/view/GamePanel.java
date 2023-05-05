@@ -36,6 +36,7 @@ public class GamePanel extends JPanel
 		setupPanel();
 		setupListeners();
 		setupLayout();
+		updateDisplay();
 	}
 	
 	private void setupPanel()
@@ -75,7 +76,9 @@ public class GamePanel extends JPanel
 					public void mouseClicked(MouseEvent click)
 					{
 						progNum += 1;
+						updateDisplay();
 						text.setText(app.progression(progNum));
+						
 					}
 
 					@Override
@@ -112,16 +115,23 @@ public class GamePanel extends JPanel
 		layout.putConstraint(SpringLayout.EAST, dialogue, -40, SpringLayout.EAST, this);
 		layout.putConstraint(SpringLayout.SOUTH, dialogue, -20, SpringLayout.SOUTH, this);
 		
-		
-		layout.putConstraint(SpringLayout.NORTH, bgImage, 10, SpringLayout.NORTH, this);
-		layout.putConstraint(SpringLayout.WEST, bgImage, 10, SpringLayout.WEST, this);
-		layout.putConstraint(SpringLayout.EAST, bgImage, -10, SpringLayout.EAST, this);
-		layout.putConstraint(SpringLayout.SOUTH, bgImage, -10, SpringLayout.SOUTH, this);
-		
 	}
 	
 	private void updateDisplay()
 	{
-		
+		if (progNum <= 5 && progNum >= 3)
+		{
+			try
+			{
+				backgroundImg = new ImageIcon(getClass().getResource("/photos/SceneOne.png"));
+				bgImage.setIcon(backgroundImg);
+				bgImage.setText("Stuff");
+			}
+			catch (NullPointerException missingFile)
+			{
+				this.bgImage = new JLabel("Not found lol");
+				
+			}
+		}
 	}
 }
