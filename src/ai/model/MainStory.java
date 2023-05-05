@@ -23,37 +23,41 @@ public class MainStory
 		}
 		else if (progNum == 3)
 		{
-			return threeD();
+			return transition();
 		}
 		else if (progNum == 4)
 		{
-			return fourD();
+			return threeD();
 		}
 		else if (progNum == 5)
 		{
-			return fiveD();
+			return fourD();
 		}
 		else if (progNum == 6)
 		{
-			return sixD();
+			return fiveD();
 		}
 		else if (progNum == 7)
 		{
-			return sevenD();
+			return sixD();
 		}
 		else if (progNum == 8)
 		{
-			return eightD();
+			return sevenD();
 		}
 		else if (progNum == 9)
 		{
-			return nineD();
+			return eightD();
 		}
 		else if (progNum == 10)
 		{
-			return tenD();
+			return nineD();
 		}
 		else if (progNum == 11)
+		{
+			return tenD();
+		}
+		else if (progNum == 12)
 		{
 			return elevenD();
 		}
@@ -120,6 +124,12 @@ public class MainStory
 	private String tenD()
 	{
 		String dialogue = "As you turn away from the two animals while the dog tries to stop the cat, you can't help but wonder...";
+		return dialogue;
+	}
+	
+	private String transition()
+	{
+		String dialogue = "Placeholder";
 		return dialogue;
 	}
 	

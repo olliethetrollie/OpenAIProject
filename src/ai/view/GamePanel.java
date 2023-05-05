@@ -46,7 +46,18 @@ public class GamePanel extends JPanel
 		this.add(bgImage);
 		this.setLayout(layout);
 		
-		bgImage.setIcon(backgroundImg);
+		try
+		{
+			backgroundImg = new ImageIcon(getClass().getResource("/photos/park.PNG"));
+			bgImage.setIcon(backgroundImg);
+			bgImage.setText("Scene");
+		}
+		catch (NullPointerException missingFile)
+		{
+			this.bgImage = new JLabel("Not found lol");
+			
+		}
+
 		this.add(dialogue);
 		
 		dialogue.add(text);
@@ -112,7 +123,7 @@ public class GamePanel extends JPanel
 	
 	private void updateDisplay()
 	{
-		if (progNum <= 5 && progNum >= 3)
+		if (progNum <= 6 && progNum >= 3)
 		{
 			try
 			{
@@ -126,7 +137,7 @@ public class GamePanel extends JPanel
 				
 			}
 		}
-		else if (progNum == 6)
+		else if (progNum == 7)
 		{
 			try
 			{
@@ -140,7 +151,7 @@ public class GamePanel extends JPanel
 				
 			}
 		}
-		else if (progNum == 7)
+		else if (progNum == 8)
 		{
 			try
 			{
@@ -154,7 +165,7 @@ public class GamePanel extends JPanel
 				
 			}
 		}
-		else if (progNum > 7 && progNum < 10)
+		else if (progNum > 8 && progNum < 11)
 		{
 			try
 			{
@@ -168,12 +179,12 @@ public class GamePanel extends JPanel
 				
 			}
 		}
-		else if (progNum >= 10)
+		else if (progNum >= 11)
 		{
 			try
 			{
-				backgroundImg = new ImageIcon(getClass().getResource(""));
-				bgImage.setIcon(null);
+				backgroundImg = new ImageIcon(getClass().getResource("/photos/park.PNG"));
+				bgImage.setIcon(backgroundImg);
 				bgImage.setText("Stuff");
 			}
 			catch (NullPointerException missingFile)
