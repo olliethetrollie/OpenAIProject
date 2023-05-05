@@ -47,20 +47,9 @@ public class GamePanel extends JPanel
 		this.setLayout(layout);
 		this.add(dialogue);
 		
-		try
-		{
-			backgroundImg = new ImageIcon(getClass().getResource("/photos/park.png"));
-			bgImage.setIcon(backgroundImg);
-			bgImage.setText("Stuff");
-		}
-		catch (NullPointerException missingFile)
-		{
-			this.bgImage = new JLabel("Not found lol");
-			
-		}
-		
-		bgImage.setIcon(backgroundImg);
 		dialogue.add(text);
+		bgImage.setIcon(backgroundImg);
+		
 	}
 	
 	private void setupListeners()
@@ -76,8 +65,9 @@ public class GamePanel extends JPanel
 					public void mouseClicked(MouseEvent click)
 					{
 						progNum += 1;
-						updateDisplay();
+						
 						text.setText(app.progression(progNum));
+						updateDisplay();
 						
 					}
 
@@ -125,6 +115,62 @@ public class GamePanel extends JPanel
 			{
 				backgroundImg = new ImageIcon(getClass().getResource("/photos/SceneOne.png"));
 				bgImage.setIcon(backgroundImg);
+				bgImage.setText("Stuff");
+			}
+			catch (NullPointerException missingFile)
+			{
+				this.bgImage = new JLabel("Not found lol");
+				
+			}
+		}
+		else if (progNum == 6)
+		{
+			try
+			{
+				backgroundImg = new ImageIcon(getClass().getResource("/photos/SceneTwo.png"));
+				bgImage.setIcon(backgroundImg);
+				bgImage.setText("Stuff");
+			}
+			catch (NullPointerException missingFile)
+			{
+				this.bgImage = new JLabel("Not found lol");
+				
+			}
+		}
+		else if (progNum == 7)
+		{
+			try
+			{
+				backgroundImg = new ImageIcon(getClass().getResource("/photos/SceneThree.png"));
+				bgImage.setIcon(backgroundImg);
+				bgImage.setText("Stuff");
+			}
+			catch (NullPointerException missingFile)
+			{
+				this.bgImage = new JLabel("Not found lol");
+				
+			}
+		}
+		else if (progNum > 7 && progNum < 10)
+		{
+			try
+			{
+				backgroundImg = new ImageIcon(getClass().getResource("/photos/SceneFour.png"));
+				bgImage.setIcon(backgroundImg);
+				bgImage.setText("Stuff");
+			}
+			catch (NullPointerException missingFile)
+			{
+				this.bgImage = new JLabel("Not found lol");
+				
+			}
+		}
+		else if (progNum >= 10)
+		{
+			try
+			{
+				backgroundImg = new ImageIcon(getClass().getResource(""));
+				bgImage.setIcon(null);
 				bgImage.setText("Stuff");
 			}
 			catch (NullPointerException missingFile)

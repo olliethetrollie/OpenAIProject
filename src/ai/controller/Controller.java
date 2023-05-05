@@ -37,7 +37,7 @@ public class Controller
 	 */
 	public String progression(int progNum)
 	{
-		if (progNum < 10)
+		if (progNum < 12)
 		{
 			return mainPath.dialogue(progNum);
 		}

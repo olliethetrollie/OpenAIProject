@@ -33,6 +33,30 @@ public class MainStory
 		{
 			return fiveD();
 		}
+		else if (progNum == 6)
+		{
+			return sixD();
+		}
+		else if (progNum == 7)
+		{
+			return sevenD();
+		}
+		else if (progNum == 8)
+		{
+			return eightD();
+		}
+		else if (progNum == 9)
+		{
+			return nineD();
+		}
+		else if (progNum == 10)
+		{
+			return tenD();
+		}
+		else if (progNum == 11)
+		{
+			return elevenD();
+		}
 		else
 		{
 			return "error";
@@ -66,6 +90,42 @@ public class MainStory
 	private String fiveD()
 	{
 		String dialogue = "Cat: You're making stuff up. Either that, or you're actually losing it.";
+		return dialogue;
+	}
+	
+	private String sixD()
+	{
+		String dialogue = "Dog: Wait! Look! There's the bird!";
+		return dialogue;
+	}
+	
+	private String sevenD()
+	{
+		String dialogue = "Dog: It's so shiny...";
+		return dialogue;
+	}
+	
+	private String eightD()
+	{
+		String dialogue = "Cat: ...";
+		return dialogue;
+	}
+	
+	private String nineD()
+	{
+		String dialogue = "Cat: I'm gonna eat it.";
+		return dialogue;
+	}
+	
+	private String tenD()
+	{
+		String dialogue = "As you turn away from the two animals while the dog tries to stop the cat, you can't help but wonder...";
+		return dialogue;
+	}
+	
+	private String elevenD()
+	{
+		String dialogue = "What the hell just happened?";
 		return dialogue;
 	}
 }
