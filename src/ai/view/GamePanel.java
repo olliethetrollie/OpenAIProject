@@ -130,12 +130,14 @@ public class GamePanel extends JPanel
 				backgroundImg = new ImageIcon(getClass().getResource("/photos/SceneOne.PNG"));
 				bgImage.setIcon(backgroundImg);
 				bgImage.setText("Stuff");
+				
 			}
 			catch (NullPointerException missingFile)
 			{
 				this.bgImage = new JLabel("Not found lol");
 				
 			}
+			text.setText(app.progression(progNum));
 		}
 		else if (progNum == 7)
 		{
@@ -150,6 +152,7 @@ public class GamePanel extends JPanel
 				this.bgImage = new JLabel("Not found lol");
 				
 			}
+			text.setText(app.progression(progNum));
 		}
 		else if (progNum == 8)
 		{
@@ -164,6 +167,7 @@ public class GamePanel extends JPanel
 				this.bgImage = new JLabel("Not found lol");
 				
 			}
+			text.setText(app.progression(progNum));
 		}
 		else if (progNum > 8 && progNum < 11)
 		{
@@ -178,6 +182,7 @@ public class GamePanel extends JPanel
 				this.bgImage = new JLabel("Not found lol");
 				
 			}
+			text.setText(app.progression(progNum));
 		}
 		else if (progNum >= 11)
 		{
@@ -192,6 +197,7 @@ public class GamePanel extends JPanel
 				this.bgImage = new JLabel("Not found lol");
 				
 			}
+			text.setText(app.progression(progNum));
 		}
 	}
 }

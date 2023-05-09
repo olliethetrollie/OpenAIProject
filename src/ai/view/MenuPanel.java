@@ -48,7 +48,7 @@ public class MenuPanel extends JPanel
 		{
 			titleImg = new ImageIcon(getClass().getResource("/photos/titleone.png"));
 			title.setIcon(titleImg);
-			title.setText("Title");
+			title.setText("");
 		}
 		catch (NullPointerException missingFile)
 		{
@@ -79,5 +79,8 @@ public class MenuPanel extends JPanel
 	{
 		layout.putConstraint(SpringLayout.NORTH, buttonPanel, 250, SpringLayout.NORTH, this);
 		layout.putConstraint(SpringLayout.WEST, buttonPanel, 450, SpringLayout.WEST, this);
+		
+		layout.putConstraint(SpringLayout.WEST, title, 450, SpringLayout.WEST, this);
+		layout.putConstraint(SpringLayout.NORTH, title, 100, SpringLayout.NORTH, this);
 	}
 }
