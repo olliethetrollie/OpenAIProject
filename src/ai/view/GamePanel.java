@@ -79,7 +79,7 @@ public class GamePanel extends JPanel
 						progNum += 1;
 						updateDisplay();
 						text.setText(app.progression(progNum));
-						
+						text.setText(app.progression(progNum));
 						
 					}
 
@@ -199,5 +199,6 @@ public class GamePanel extends JPanel
 			}
 			text.setText(app.progression(progNum));
 		}
+		
 	}
 }
